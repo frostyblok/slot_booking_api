@@ -8,4 +8,5 @@
 config/initializers/secret_token.rb
 config/master.key
 
-.idea/
+.idea/*
+idea
