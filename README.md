@@ -1,24 +1,42 @@
-# README
+# Slot Booking. #
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Vision
 
-Things you may want to cover:
+Logistics management software that helps shipping companies book a time slot to load or
+unload goods at a warehouse. Specifically, given a day and the duration for the new slot to be booked, the system suggesting a list of times that are available for
+booking. Users can then pick one suggestion from the list and book a slot at this time.
 
-* Ruby version
+## Things you may want to cover: ##
+- Ruby version: 2.7.1
+- Rails version: 6.0.6
+- Database: PORO
 
-* System dependencies
+# Installing steps #
 
-* Configuration
 
-* Database creation
+### Clone the project ###
+```
+git clone https://github.com/frostyblok/slot_booking_api
+```
 
-* Database initialization
+### CD into project file ###
+```
+cd slot_booking_api
+```
 
-* How to run the test suite
+### Install all the necessary dependencies ###
+```
+bundle i
+```
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+## Run test cases ##
+```
+bundle exec rspec -f d
+```
+
+## Start rails server ##
+```
+rails s -p 8080
+```
