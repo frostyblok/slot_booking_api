@@ -1,3 +1,10 @@
+# == Schema Information
+# The model keeps track of all the booked days for time slots. Each booked day has many booked_times
+#
+# Table name: booked_days
+#
+#  id                        :integer          not null, primary key
+#  day                       :string
 class BookedDay
   attr_accessor :id, :day
   @@all
