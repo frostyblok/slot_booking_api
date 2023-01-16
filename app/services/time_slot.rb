@@ -7,7 +7,9 @@ class TimeSlot
     interval = 15.minutes
 
     while (start_time <= end_time)
+      # For every potential timeslot, check if it doesn't exist i.e already booked?
       booked_day.booked_times.each do |booked_time|
+        # If slot already exists as a start time, make the end time the new start time and move on
         if start_time == booked_time.start
           start_time = Time.parse(booked_time.end)
           next
@@ -20,6 +22,7 @@ class TimeSlot
         end
       end
 
+      # Only assign the timeslot provided it's within the same day
       timeslots << start_time.strftime('%H:%M') if start_time <= end_time
       start_time += interval
     end
